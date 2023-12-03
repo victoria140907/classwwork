@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>Tailwind CSS Animation Example</title>
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-gray-200">
+
+  <div class="container mx-auto mt-8">
+    <label for="toggleCard" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer">
+      <input type="checkbox" class="hidden" id="toggleCard">
+      Show Card
+    </label>
+    <div class="card mt-4 p-6 bg-white shadow-md fade-in">
+      <h5 class="text-xl font-semibold mb-2">Animated Card</h5>
+      <p class="text-gray-700">This card fades in when the button is clicked.</p>
+    </div>
+  </div>
+
+</body>
+</html>
